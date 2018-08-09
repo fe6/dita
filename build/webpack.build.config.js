@@ -54,6 +54,16 @@ if (isDev) {
     hash: true,
     cache: true,
   }));
+  // 复制静态资源
+  var CopyWebpackPlugin = require('copy-webpack-plugin');
+  plugins.push(
+  new CopyWebpackPlugin([
+    {
+      from: path.resolve(__dirname, '../lib'),
+      to: path.resolve(__dirname, '../' + dist),
+      ignore: ['.*']
+    }
+  ]))
   // 插入热重载
   Object.keys(entry).forEach(function (name) {
     entry[name] = ['./build/dev-client'].concat(entry[name]);

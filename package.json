@@ -76,10 +76,11 @@
     "webpack-dev-server": "^2.9.4",
     "webpack-hot-middleware": "^2.20.0",
     "webpack-merge": "^4.1.1",
-    "webpackbar": "^2.6.1"
+    "webpackbar": "^2.6.1",
+    "copy-webpack-plugin": "^4.5.2"
   },
   "engines": {
-    "node": ">= 4.0.0",
+    "node": ">= 9.0.0",
     "npm": ">= 3.0.0"
   },
   "browserslist": [
